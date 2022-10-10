@@ -17,6 +17,9 @@ class Solution {
         if (c == '#' || root.next[c - 'a'] == null) return;
         root = root.next[c - 'a'];
         
+        
+        
+        
         if(root.word != null) {
             result.add(root.word);
             root.word = null;
