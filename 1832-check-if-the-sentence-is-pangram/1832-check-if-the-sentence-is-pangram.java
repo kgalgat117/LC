@@ -1,12 +1,12 @@
 class Solution {
     public boolean checkIfPangram(String sentence) {
-        int [] counter = new int[26];
+        boolean [] counter = new boolean[26];
         for(char c: sentence.toCharArray()) {
-            counter[c - 'a']++;
+            counter[c - 'a'] = true;
         }
         
-        for(int count:counter) {
-            if(count == 0) return false;
+        for(boolean count:counter) {
+            if(!count) return false;
         }
         
         return true;
